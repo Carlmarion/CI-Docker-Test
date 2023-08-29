@@ -1,7 +1,7 @@
 # docker-compose.yml
 services:
   server:
-    build: ./server
+    build: server
     command: npm run dev
     volumes:
       - ./server/src/:/app/src/
@@ -12,7 +12,7 @@ services:
     volumes:
       - ./data:/data/db
   client:
-    build: ./client
+    build: client
     ports:
       - 8080:3000
     volumes:
